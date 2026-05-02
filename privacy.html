@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Daily AI Build</title>
+  <meta name="description" content="Privacy Policy for Daily AI Build — what TikTok data the application accesses and how it is handled." />
+  <style>
+    :root { --ink: #0c0c0c; --paper: #fafaf7; --accent: #cc785c; --muted: #555; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body { background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; line-height: 1.65; }
+    main { max-width: 720px; margin: 0 auto; padding: 64px 32px; }
+    .eyebrow { font-size: 13px; letter-spacing: 6px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 8px; }
+    h1 { font-size: 36px; line-height: 1.1; margin: 0 0 8px; letter-spacing: -1px; }
+    .updated { color: var(--muted); font-size: 14px; margin-bottom: 32px; }
+    h2 { margin-top: 32px; font-size: 20px; letter-spacing: -0.3px; }
+    p, li { font-size: 16px; }
+    a { color: var(--accent); }
+    code { background: #ececea; padding: 2px 6px; border-radius: 3px; font-size: 14px; }
+    nav { margin-top: 48px; padding-top: 24px; border-top: 1px solid #ddd; font-size: 14px; }
+    nav a { margin-right: 24px; }
+    footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">★ Daily AI Build</div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: May 2, 2026</p>
+
+    <p>
+      Daily AI Build is a personal-use application that posts content to a single TikTok account
+      (<a href="https://www.tiktok.com/@dailyaibuild" rel="noopener">@dailyaibuild</a>) on behalf of
+      its operator, Brenden Song. This policy explains what TikTok data the application accesses
+      and how it is handled.
+    </p>
+
+    <h2>What we collect</h2>
+    <ul>
+      <li><strong>TikTok OAuth tokens</strong> for the account owner only. Stored locally on the operator's machine in an encrypted-at-rest <code>.env</code> file. Never transmitted to any third party.</li>
+      <li><strong>Account basic info</strong> returned by TikTok's <code>user.info.basic</code> scope (open ID, display name) — used solely to confirm the connected account.</li>
+      <li><strong>Upload status</strong> returned by TikTok's Content Posting API endpoints — used to confirm publishes succeeded.</li>
+    </ul>
+
+    <h2>What we do with it</h2>
+    <ul>
+      <li>Authenticate the operator's TikTok account via TikTok Login Kit (PKCE OAuth flow).</li>
+      <li>Upload locally-rendered videos created by the operator to the operator's own TikTok account via the Content Posting API.</li>
+      <li>Set the AI-generated content flag on every upload (videos contain a synthesized voice clone of the operator and programmatically generated visuals).</li>
+    </ul>
+
+    <h2>What we don't do</h2>
+    <ul>
+      <li>Collect data from any TikTok user other than the operator's own account.</li>
+      <li>Share, sell, or transmit any data to third parties.</li>
+      <li>Store data anywhere outside the operator's local machine.</li>
+      <li>Use TikTok data to train models or for any purpose other than publishing the operator's own content.</li>
+    </ul>
+
+    <h2>Data retention</h2>
+    <p>
+      OAuth tokens are stored locally only and can be revoked by the operator at any time via
+      TikTok's account settings. Logs and rendered videos are kept locally for the operator's own
+      reference; they contain no data about other TikTok users.
+    </p>
+
+    <h2>Third-party services</h2>
+    <p>
+      The application calls the TikTok Open API. TikTok's privacy practices are governed by their own
+      <a href="https://www.tiktok.com/legal/page/us/privacy-policy/en" rel="noopener">Privacy Policy</a>.
+      Voice synthesis is provided by ElevenLabs and only processes operator-supplied scripts (no
+      user-identifying data sent to ElevenLabs).
+    </p>
+
+    <h2>Children</h2>
+    <p>
+      This application is not directed to children under 13 and does not knowingly collect data
+      from anyone other than the operator.
+    </p>
+
+    <h2>Changes</h2>
+    <p>
+      Material changes will be reflected by updating the "Last updated" date above.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      For questions or to request token revocation:
+      <a href="mailto:song.brenden@gmail.com">song.brenden@gmail.com</a>
+    </p>
+
+    <nav>
+      <a href="./">Home</a>
+      <a href="./terms.html">Terms of Service</a>
+      <a href="https://github.com/bsong619/ai-build-channel" rel="noopener">Source</a>
+    </nav>
+    <footer>
+      © 2026 Brenden Song · <a href="mailto:song.brenden@gmail.com">song.brenden@gmail.com</a>
+    </footer>
+  </main>
+</body>
+</html>
